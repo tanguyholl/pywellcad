@@ -923,6 +923,14 @@ class TestLog(unittest.TestCase, ExtraAsserts, SamplePath):
         self.assertNotEqual(self.gr_log.overflow_type, 2)
         self.gr_log.overflow_type = 2
 
+    def test_shading_type(self):
+        # verify that the property is initially set to 0 (opaque), then set it to 2 (combined)
+        self.assertEqual(self.gr_log.shading_type, 0)
+        self.gr_log.shading_type = 2
+        # verify that the property has been changed and turn back to the original value
+        self.assertNotEqual(self.gr_log.shading_type, 0)
+        self.gr_log.shading_type = 0
+
     def test_decades(self):
         # verify that the property is initially set to 1, then set it to 3
         self.assertEqual(self.gr_log.decades, 1)

@@ -2469,7 +2469,13 @@ class Log(DispatchWrapper):
 
     @property
     def shading_type(self):
-        """int: The type of shading."""
+        """int: The type of shading.
+        0: Opaque
+        1: Transparent
+        2: Combined
+        3: Horizontal Palette
+        4: Vertical Palette
+        """
         return self._dispatch.ShadingType
 
     @shading_type.setter
