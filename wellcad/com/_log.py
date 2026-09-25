@@ -2359,7 +2359,7 @@ class Log(DispatchWrapper):
         self._dispatch.AllowViewLogHistory(export, password)
     @property
     def maj_grid_color(self):
-        """int: The background color of the major vertical grid.
+        """int: The color of the major vertical grid lines.
 
         Colours are specified as a 32 bit integer with an ``xBGR`` structure.
         Each of the blue (B), green (G) and red (R) components are 8 bit
@@ -2373,7 +2373,7 @@ class Log(DispatchWrapper):
 
     @property
     def min_grid_color(self):
-        """int: The background color of the minor vertical grids.
+        """int: The color of the minor vertical grid lines.
 
         Colours are specified as a 32 bit integer with an ``xBGR`` structure.
         Each of the blue (B), green (G) and red (R) components are 8 bit
@@ -2485,16 +2485,17 @@ class Log(DispatchWrapper):
     @property
     def symbol_style(self):
         """int: The index of the symbol style.
-        0: Circle
-        1: Disk
-        2: Square
-        3: Box
-        4: Triangle
-        5: Pyramid
-        6: Lozenge
-        7: Diamond
-        8: Cross
-        9: Star
+        0: None
+        1: Circle
+        2: Disk
+        3: Square
+        4: Box
+        5: Triangle
+        6: Pyramid
+        7: Lozenge
+        8: Diamond
+        9: Cross
+        10: Star
         """
         return self._dispatch.SymbolStyle
 
